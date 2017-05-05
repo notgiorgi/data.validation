@@ -1,0 +1,16 @@
+{
+  "name": "control.validation",
+  "version": "0.0.1",
+  "description": "Validation ADT",
+  "main": "index.js",
+  "repository": "https://github.com/notgiorgi/control.validation",
+  "author": "Giorgi Bagdavadze <notgiorgi@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.19.0"
+  },
+  "dependencies": {
+    "daggy": "^1.0.0",
+    "ramda": "^0.23.0"
+  }
+}
