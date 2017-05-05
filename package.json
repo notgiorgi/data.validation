@@ -7,10 +7,15 @@
   "author": "Giorgi Bagdavadze <notgiorgi@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^3.19.0"
+    "eslint": "^3.19.0",
+    "jest": "^19.0.2"
   },
   "dependencies": {
     "daggy": "^1.0.0",
+    "fantasy-land": "^3.2.0",
     "ramda": "^0.23.0"
+  },
+  "scripts": {
+    "test": "jest"
   }
 }
