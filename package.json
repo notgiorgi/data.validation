@@ -16,13 +16,13 @@
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^2.1.2",
     "jest": "^19.0.2",
+    "ramda": "^0.23.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "daggy": "^1.0.0",
-    "fantasy-land": "^3.2.0",
-    "ramda": "^0.23.0"
+    "fantasy-land": "^3.2.0"
   },
   "scripts": {
     "test": "jest",
