@@ -1,5 +1,5 @@
 const { taggedSum } = require('daggy')
-const fl = require('fantasy-land')
+const { of, map, ap, chain } = require('fantasy-land')
 
 const Validation = taggedSum('Validation', {
   Failure: ['errors'],
@@ -15,17 +15,17 @@ Validation.prototype.fold = function (f) {
   })
 }
 
-Validation.prototype[fl.map] = function (f) {
+Validation.prototype.map = Validation.prototype[map] = function (f) {
   return this.cata({
     Success: value => Success(f(value)),
     Failure: errors => Failure(errors)
   })
 }
 
-Validation[fl.of] = x => Success(x)
+Validation.of = Validation[of] = x => Success(x)
 Validation.fail = err => Failure(err)
 
-Validation.prototype[fl.ap] = function (f) {
+Validation.prototype.ap = Validation.prototype[ap] = function (f) {
   return this.cata({
     Success: fn =>
       f.cata({
@@ -40,7 +40,7 @@ Validation.prototype[fl.ap] = function (f) {
   })
 }
 
-Validation.prototype[fl.chain] = function (f) {
+Validation.prototype.map = Validation.prototype[chain] = function (f) {
   return this.cata({
     Success: value => f(value),
     Failure: () => this
