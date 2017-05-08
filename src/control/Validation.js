@@ -40,7 +40,7 @@ Validation.prototype.ap = Validation.prototype[ap] = function (f) {
   })
 }
 
-Validation.prototype.map = Validation.prototype[chain] = function (f) {
+Validation.prototype.chain = Validation.prototype[chain] = function (f) {
   return this.cata({
     Success: value => f(value),
     Failure: () => this
