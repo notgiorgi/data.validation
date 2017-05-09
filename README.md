@@ -17,7 +17,7 @@ instance Monad (Validation a)
 additional methods:
 
 ```haskell
-fold :: Validation t a ~> (a -> b) -> b
+fold :: Validation a b ~> (a -> c) -> (b -> c) -> c
 
 isSuccess :: Validation t a ~> bool
 
