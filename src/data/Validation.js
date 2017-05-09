@@ -8,10 +8,10 @@ const Validation = taggedSum('Validation', {
 
 const { Success, Failure } = Validation
 
-Validation.prototype.fold = function (f) {
+Validation.prototype.fold = function (f, g) {
   return this.cata({
-    Success: value => f(value),
-    Failure: x => x
+    Success: value => g(value),
+    Failure: x => f(x)
   })
 }
 
