@@ -1,8 +1,8 @@
 {
-  "name": "control.validation",
+  "name": "data.validation",
   "version": "0.0.1",
-  "description": "Validation ADT",
-  "main": "index.js",
+  "description": "Fantasy-land compliant Applicative-style validation",
+  "main": "./src/data/Validation.js",
   "repository": "https://github.com/notgiorgi/control.validation",
   "author": "Giorgi Bagdavadze <notgiorgi@gmail.com>",
   "license": "MIT",
@@ -27,7 +27,6 @@
   "scripts": {
     "test": "jest",
     "build": "gulp build",
-    "start": "gulp",
-    "publish": ""
+    "start": "gulp"
   }
 }

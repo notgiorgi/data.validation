@@ -9,8 +9,7 @@ var sourcemaps  = require('gulp-sourcemaps');
 
 
 gulp.task('build', function () {
-    // app.js is your main JS file with all your module inclusions
-    return browserify({entries: './src/control/Validation.js', debug: true})
+    return browserify({entries: './src/data/Validation.js', debug: true})
         .transform(babelify, { presets: ["es2015"], global: true })
         .bundle()
         .pipe(source('bundle.js'))
