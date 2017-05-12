@@ -1,5 +1,5 @@
 const { taggedSum } = require('daggy')
-const { of, map, ap, chain } = require('fantasy-land')
+const { of, map, ap } = require('fantasy-land')
 
 const Validation = taggedSum('Validation', {
   Failure: ['errors'],
@@ -37,13 +37,6 @@ Validation.prototype.ap = Validation.prototype[ap] = function (f) {
         Success: () => this,
         Failure: otherErrors => Failure(errors.concat(otherErrors))
       })
-  })
-}
-
-Validation.prototype.chain = Validation.prototype[chain] = function (f) {
-  return this.cata({
-    Success: value => f(value),
-    Failure: () => this
   })
 }
 

@@ -6,12 +6,11 @@ data Validation a b = Failure a
 ```
 
 ### API
-Validation type implements Functor, Applicative and Monad typeclasses in [fantasy-land](https://github.com/fantasyland/fantasy-land) spec
+Validation type implements Functor and Applicative typeclasses in [fantasy-land](https://github.com/fantasyland/fantasy-land) spec
 
 ```haskell
 instance Functor (Validation a)
 instance Monoid a => Applicative (Validation a)
-instance Monad (Validation a)
 ```
 
 additional methods:
